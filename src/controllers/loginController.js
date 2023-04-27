@@ -90,11 +90,19 @@ const bcrypt = require('bcrypt');
     });
   }
 
+
+  function logout(req, res) {
+    if (req.session.loggedIn) {
+      req.session.destroy();
+    }
+    res.redirect('/');
+  }
   //----------------------------
 
   module.exports = {
     login,
     register,
     storeUser,
-    auth
+    auth,
+    logout
   }
