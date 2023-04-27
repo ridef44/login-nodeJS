@@ -17,16 +17,19 @@
   <body class="bg-gray-200">
     <nav class="flex py-5 bg-gray-800 text-white px-24">
       <div class="w-1/2 px-12 mr-auto">
-        <h1 class="text-2xl font-bold">Inventario WOL</h1>
+        <h1 class="text-2xl font-bold">Sistemas WOL</h1>
       </div>
 
       <ul class="w-1/2 px-16 ml-auto flex justify-end pt-1">
-  
-        <p></p>
+        {{#if name}}
 
-    
+        <li class="nav-item px-4">
+          <a href="/logout" class="nav-link font-semibold border-2 border-white hover:bg-white hover:text-black py-3
+            px-4 rounded-md">Salir</a>
+        </li>
 
-  
+
+        {{else}}
         <li class="nav-item px-4">
           <a href="/login" class="nav-link font-semibold hover:bg-gray-700 py-3 px-4 rounded-md">Login</a>
         </li>
@@ -35,7 +38,8 @@
           <a href="/register" class="nav-link font-semibold border-2 border-white hover:bg-white hover:text-black py-3
             px-4 rounded-md">Registro</a>
         </li>
-      
+
+        {{/if}}
       </ul>
     </nav>
 
